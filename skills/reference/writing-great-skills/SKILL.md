@@ -3,28 +3,39 @@ name: writing-great-skills
 description: [reference] Writing great skills - USE when writing/improving skills. DO follow best practices. NOT for installation. Triggers: write skill/create skill/skill best practices
 ---
 
-# 缂栧啓浼樼Skill鎸囧崡
+# 编写优秀Skill指南
 
-鏉ユ簮锛歮attpocock/skills (140k猸?
+来源：mattpocock/skills (140k⭐)
 
-缂栧啓楂樿川閲廇I Agent鎶€鑳界殑璇嶆眹琛ㄥ拰鍘熷垯銆?
-## 鏍稿績鍘熷垯
+编写高质量AI Agent技能的词汇表和原则。
 
-### 鍙娴嬫€?- Skill搴旇鏈夋槑纭殑瑙﹀彂鏉′欢
-- 鐢ㄦ埛鐭ラ亾璋冪敤瀹冧細鍙戠敓浠€涔?- 琛屼负涓嶆剰澶栥€佷笉瓒婄晫
+## 核心原则
 
-### 鍙粍鍚堟€?- Skill搴旇灏忚€屼笓娉?- 涓€涓猻kill鍙仛涓€浠朵簨
-- 鍙互涓庡叾浠杝kill缁勫悎浣跨敤
-- 涓嶄緷璧栫壒瀹氱殑澶栭儴娴佺▼
+### 可预测性
+- Skill应该有明确的触发条件
+- 用户知道调用它会发生什么
+- 行为不意外、不越界
 
-### 杈圭晫鏄庣‘
-- 鏄庣‘浠€涔堟椂鍊欒鐢ㄣ€佷粈涔堟椂鍊欎笉璇ョ敤
-- 鏈夋竻鏅扮殑閫€鍑烘潯浠?- 涓嶈秺鏉冨仛鍏朵粬skill璇ュ仛鐨勪簨
+### 可组合性
+- Skill应该小而专注
+- 一个skill只做一件事
+- 可以与其他skill组合使用
+- 不依赖特定的外部流程
 
-## 缂栧啓瑙勮寖
-- 鎻忚堪瑕佸寘鍚Е鍙戝満鏅?- 姝ラ瑕佸彲鎵ц銆佷笉妯＄硦
-- 鏈夋槑纭殑璐ㄩ噺妫€鏌ユ竻鍗?- 淇濇寔鏇存柊鍜岃凯浠?
-## 鑷垜杩涘寲
-瀹氭湡review鐜版湁skill锛岄棶锛?- 杩欎釜skill瑙ｅ喅浜嗕粈涔堥棶棰橈紵
-- 鏈夋病鏈夋洿濂界殑鍐欐硶锛?- 鍜岀幇鏈夌殑鍏朵粬skill鏈夋病鏈夊啿绐侊紵
-- 鐢ㄦ埛鐢ㄨ捣鏉ラ『鐣呭悧锛?
+### 边界明确
+- 明确什么时候该用、什么时候不该用
+- 有清晰的退出条件
+- 不越权做其他skill该做的事
+
+## 编写规范
+- 描述要包含触发场景
+- 步骤要可执行、不模糊
+- 有明确的质量检查清单
+- 保持更新和迭代
+
+## 自我进化
+定期review现有skill，问：
+- 这个skill解决了什么问题？
+- 有没有更好的写法？
+- 和现有的其他skill有没有冲突？
+- 用户用起来顺畅吗？
