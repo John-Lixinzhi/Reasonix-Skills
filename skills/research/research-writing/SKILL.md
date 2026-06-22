@@ -1,6 +1,6 @@
 ---
 name: research-writing
-description: [绉戠爺] 鏂囩尞缁艰堪涓庡啓浣?鈥?USE when 鏌ユ枃鐚?鍐欑患杩?鏁寸悊寮曠敤/鍐欒鏂囥€侱O 鏂囩尞妫€绱⑩啋鍒嗙粍鍒嗘瀽鈫扞MRAD鍐欎綔鈫払ibTeX寮曠敤銆侼OT for 鏁板寤烘ā璁烘枃锛堢敤math-modeling锛夈€俆riggers: 鏌ユ枃鐚?鍐欑患杩?鏂囩尞妫€绱?璁烘枃鍐欎綔/寮曠敤绠＄悊
+description: [research] Research writing - USE when need literature search/review/citations. DO literature retrieval, IMRaD writing, BibTeX. NOT for math modeling. Triggers: literature review/search papers/write review
 ---
 
 # 绉戠爺鏂囩尞缁艰堪涓庡啓浣?
