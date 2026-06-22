@@ -1,6 +1,6 @@
 ---
 name: ml-intern-skill
-description: [绉戠爺] ML Intern鑷不鐮旂┒ 鈥?瑙﹀彂鏉′欢锛氶渶瑕佽璁烘枃/璁粌ML妯″瀷/鍋歁L瀹為獙鏃躲€侶uggingFace鍑哄搧锛岃兘鑷姩璇昏鏂囥€佸啓浠ｇ爜銆佽缁冩ā鍨嬨€侀儴缃插埌HF Hub銆傛敮鎸丠F鍏ㄧ敓鎬?Sandbox娌欑
+description: [research] ML Intern - USE when need to read papers/train ML models/do experiments. DO auto research, code, train, deploy. NOT for non-ML tasks. Triggers: read paper/train model/ML experiment
 ---
 
 # ML Intern 鈥?鑷不 ML 宸ョ▼甯?
