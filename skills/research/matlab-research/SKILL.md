@@ -1,6 +1,6 @@
 ---
 name: matlab-research
-description: [绉戠爺] MATLAB绉戠爺璁＄畻 鈥?瑙﹀彂鏉′欢锛氶渶瑕丮ATLAB缂栫▼/绉戠爺浣滃浘/淇″彿澶勭悊/鍥惧儚澶勭悊/鏁板€艰绠楁椂銆侻ATLAB瀹樻柟Agentic Toolkit鍏ㄧ煡璇?20涓猻kill绫诲埆)銆備綘鐨凪ATLAB鍦―:\Program Files\MATLAB\R2025b\锛屽彲閫氳繃MCP鐩磋繛
+description: [research] MATLAB research - USE when need MATLAB programming/research plotting/signal processing. DO leverage R2025b official toolkit 20 categories. NOT for Python tasks. Triggers: MATLAB/plotting/signal/computation
 ---
 
 # MATLAB 绉戠爺璁＄畻 & 浣滃浘
