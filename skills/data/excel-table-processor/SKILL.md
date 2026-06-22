@@ -1,6 +1,7 @@
 ---
 name: excel-table-processor
-description: 澶勭悊瀛︾敓璇峰亣/杩旀牎绛塃xcel缁熻琛ㄧ殑skill锛氫繚鐣欏師濮嬫牸寮忥紙鍚堝苟鍗曞厓鏍笺€佹牱寮忋€佹眹鎬昏锛夛紝鍋氱彮绾у悕鏍囧噯鍖栵紙2瀛?3鏁板瓧锛夈€佹寜鎷奸煶鎺掑簭銆佺粺涓€瀛﹂櫌鍚嶇О銆侀噸鏂扮紪鍙枫€佹寜鏃ユ湡绛涢€?2鍙?锛屼娇鐢╡xceljs鍘熷湴鏀瑰€间笉鎹熸牸寮忋€?---
+description: [data] Excel table processor - USE when processing Excel spreadsheets/student data. DO preserve format, normalize names, sort, renumber. NOT for simple CSV. Triggers: excel/table/spreadsheet/student/attendance
+---
 
 # Excel 缁熻琛ㄥ鐞?Skill
 
