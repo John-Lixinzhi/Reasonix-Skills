@@ -3,11 +3,11 @@ name: system-prompt-leaks-skill
 description: [reference] System prompt leaks - USE when need to study AI prompt design. DO reference collected prompts from Anthropic/OpenAI/Google/xAI. NOT for normal tasks. Triggers: system prompt/prompt design/how does X prompt/prompt leak
 ---
 
-# 绯荤粺鎻愮ず璇嶅弬鑰冨簱
+# 系统提示词参考库
 
-鏉ユ簮锛歛sgeirtj/system_prompts_leaks (44k猸? + jujumilk3/leaked-system-prompts (14k猸?
+来源：asgeirtj/system_prompts_leaks (44k⭐) + jujumilk3/leaked-system-prompts (14k⭐)
 
-## 鍖呭惈鐨勬彁绀鸿瘝
+## 包含的提示词
 - Claude Code / Claude Design / Claude Fable 5 / Opus 4.8
 - ChatGPT 5.5 Thinking / GPT 5.5 Instant
 - Codex
@@ -16,9 +16,12 @@ description: [reference] System prompt leaks - USE when need to study AI prompt 
 - Cursor / VS Code / Copilot
 - Perplexity
 
-## 瀛︿範瑕佺偣
-- 鍚勫鎻愮ず璇嶇殑**缁撴瀯璁捐**锛堣鑹插畾涔夆啋琛屼负瑙勫垯鈫掕緭鍑烘牸寮忥級
-- **瀹夊叏鎶ゆ爮**鐨勮璁℃ā寮?- **韬唤璁惧畾**鐨勯鏍煎樊寮?- **宸ュ叿璋冪敤**鐨勮鑼冨啓娉?
-## 浣跨敤鏂瑰紡
-- 鍙傝€冧粨搴擄細https://github.com/asgeirtj/system_prompts_leaks
-- 鍙傝€冧粨搴擄細https://github.com/jujumilk3/leaked-system-prompts
+## 学习要点
+- 各家提示词的**结构设计**（角色定义→行为规则→输出格式）
+- **安全护栏**的设计模式
+- **身份设定**的风格差异
+- **工具调用**的规范写法
+
+## 使用方式
+- 参考仓库：https://github.com/asgeirtj/system_prompts_leaks
+- 参考仓库：https://github.com/jujumilk3/leaked-system-prompts
