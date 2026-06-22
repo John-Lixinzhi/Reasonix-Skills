@@ -1,6 +1,6 @@
 ---
 name: scrapling-agent-skill
-description: [Scrapling][鏁版嵁] 缃戦〉鏁版嵁閲囬泦 鈥?瑙﹀彂鏉′欢锛氶渶瑕佹姄鍙栫綉椤垫暟鎹?web_fetch澶辫触/鏈塁loudflare鍙嶇埇/闇€瑕佸ぇ瑙勬ā鐖櫕銆傛敮鎸丮CP鐩存帴璋冪敤(get/fetch/stealthy_fetch)锛屼篃鏀寔Python缂栫爜
+description: [data] Scrapling web scraping - USE when need to scrape data/web_fetch fails/Cloudflare bypass. DO get/fetch/stealthy_fetch via MCP. NOT for simple API calls. Triggers: scrape/crawl/extract/cloudflare bypass
 ---
 
 # Scrapling 瀹樻柟 Agent Skill
