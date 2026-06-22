@@ -1,6 +1,7 @@
 ---
 name: domain-modeling
-description: [鐮斿彂] 棰嗗煙寤烘ā 鈥?USE when 椤圭洰鏈涓嶆竻鏅?AI鍜岀敤鎴疯瑷€涓嶄竴鑷?闇€瑕佸叡浜瘝姹囪〃銆侱O 鏋勫缓棰嗗煙妯″瀷鈫掓寫鎴樻湳璇竴鑷存€р啋鏇存柊CONTEXT.md+ADR銆侼OT for 浠ｇ爜瀹炵幇绫讳换鍔°€俆riggers: 鏈/棰嗗煙妯″瀷/璇嶆眹琛?鍏变韩璇█/涓婁笅鏂囨枃妗?---
+description: [dev] Domain modeling - USE when project terminology unclear/AI-user language mismatch. DO build shared glossary, challenge term consistency. NOT for implementation. Triggers: terminology/domain model/glossary/shared language
+---
 
 # 棰嗗煙寤烘ā (Domain Modeling)
 
