@@ -1,6 +1,7 @@
 ---
 name: devils-advocate
-description: [绉戠爺] 榄旈浠ｈ█浜?鈥?USE when 妫€楠岀爺绌舵€濊矾/鍐欒鏂囧墠鍋氬帇鍔涙祴璇?闇€瑕佽璐ㄧ枒銆侱O AI鎵紨榄旈浠ｈ█浜猴紝蹇呴』鎻愪緵瓒冲璇佹嵁鎵嶈姝ャ€侼OT for 绠€鍗曚俊鎭煡璇€俆riggers: 璐ㄧ枒鎴?鎸戞瘺鐥?璁鸿瘉婕忔礊/鍘嬪姏娴嬭瘯/榄旈浠ｈ█浜?---
+description: [research] Devils Advocate - USE when need to stress-test research ideas. DO AI plays devils advocate with concession-threshold. NOT for simple fact checks. Triggers: challenge me/devils advocate/stress test/critique
+---
 
 # 榄旈浠ｈ█浜?鈥?鐮旂┒鎬濊矾鍘嬪姏娴嬭瘯
 
