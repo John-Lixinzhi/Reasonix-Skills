@@ -1,0 +1,205 @@
+{
+  "version": "1.0",
+  "description": "全局技能目录索引 — 用于 skill-router 做路由决策",
+  "schema": {
+    "category": "大类：研发/数据/设计/工具/学习/运维",
+    "tags": "标签数组，用于语义匹配",
+    "triggers": "触发场景描述",
+    "negative_samples": "明确不用此 skill 的场景",
+    "dependencies": "依赖的其他 skill（链式调用）",
+    "priority": "优先级 1-5（1最高）"
+  },
+  "skills": [
+    {
+      "name": "superpowers-brainstorming",
+      "description": "[Superpowers] 设计探讨 — 实现前先理解需求、问清问题、出设计文档，通过后再编码",
+      "category": "研发",
+      "tags": ["设计", "需求分析", "架构", "规划", "前置流程"],
+      "triggers": "用户提出新功能/新项目/新需求，还没确定具体方案时；需要先想清楚再动手的场景",
+      "negative_samples": "已有明确设计文档只需执行；简单bug修复不需要设计；纯技术问题咨询",
+      "dependencies": ["superpowers-writing-plans"],
+      "priority": 2
+    },
+    {
+      "name": "superpowers-tdd",
+      "description": "[Superpowers] TDD 测试驱动开发 — RED-GREEN-REFACTOR 循环，先写测试再写实现",
+      "category": "研发",
+      "tags": ["测试", "开发", "质量", "TDD", "重构"],
+      "triggers": "开始写新功能代码之前；修bug之前；重构代码之前；任何需要写实现代码的场景",
+      "negative_samples": "用户明确说不需要测试；一次性原型/脚本；配置文件修改；文档编写",
+      "dependencies": [],
+      "priority": 2
+    },
+    {
+      "name": "superpowers-debugging",
+      "description": "[Superpowers] 系统化调试 — 4 阶段根因分析：复现→隔离→定位→修复+验证",
+      "category": "研发",
+      "tags": ["调试", "debug", "根因分析", "排错", "修复"],
+      "triggers": "代码报错/异常/行为不符合预期；测试失败原因不明；需要排查复杂问题时",
+      "negative_samples": "简单语法错误可以直接修复；已知原因的错误直接改；不需要深度分析的场景",
+      "dependencies": ["superpowers-verify"],
+      "priority": 3
+    },
+    {
+      "name": "superpowers-verify",
+      "description": "[Superpowers] 完成前验证 — 声明完成前必须运行验证命令并确认输出",
+      "category": "研发",
+      "tags": ["验证", "质量门禁", "完成检查", "测试"],
+      "triggers": "声称任务已完成/已修复/已实现之前；合并PR之前；提交代码之前",
+      "negative_samples": "仅仅是在讨论方案/设计阶段；还未开始实施的场景",
+      "dependencies": [],
+      "priority": 4
+    },
+    {
+      "name": "superpowers-writing-plans",
+      "description": "[Superpowers] 编写实现计划 — 将设计拆分为 2-5 分钟的独立小任务",
+      "category": "研发",
+      "tags": ["计划", "任务拆分", "实施规划", "执行"],
+      "triggers": "设计文档已批准需要开始实施时；接到复杂任务需要分解时",
+      "negative_samples": "极简单的单步任务；用户已经有现成计划；只需直接编码的场景",
+      "dependencies": ["superpowers-tdd", "subagent-driven-development"],
+      "priority": 3
+    },
+    {
+      "name": "superpowers-review",
+      "description": "[Superpowers] 代码审查 — 对照计划审查代码，按严重程度报告问题",
+      "category": "研发",
+      "tags": ["代码审查", "质量", "review", "审计"],
+      "triggers": "代码实现完成后；合并PR之前；需要评估代码质量的场景",
+      "negative_samples": "代码还未写完；还在开发阶段；用户明确不需要review",
+      "dependencies": ["superpowers-verify"],
+      "priority": 4
+    },
+    {
+      "name": "scrapling-agent-skill",
+      "description": "[Scrapling] 网页数据采集 — 反爬绕过/自适应解析/大规模爬虫/MCP 用法",
+      "category": "数据",
+      "tags": ["爬虫", "数据采集", "web scraping", "反爬", "Cloudflare"],
+      "triggers": "需要从网站抓取/采集数据时；web_fetch失败/被拦截时；网站有Cloudflare等反爬时；需要大规模爬取时",
+      "negative_samples": "只需要访问API（用get/curl即可）；不需要抓取网页的场景；静态文件下载",
+      "dependencies": [],
+      "priority": 2
+    },
+    {
+      "name": "excel-table-processor",
+      "description": "Excel 统计表处理 — 保留格式做班级名标准化/拼音排序/学院统一/重新编号/日期筛选",
+      "category": "数据",
+      "tags": ["Excel", "表格", "数据处理", "学生", "班级"],
+      "triggers": "处理学生请假/返校等Excel统计表；需要保留合并单元格/样式/汇总行的Excel处理",
+      "negative_samples": "不需要保留格式的简单CSV处理；非Excel格式的数据；不是统计表类型的数据",
+      "dependencies": [],
+      "priority": 3
+    },
+    {
+      "name": "guizang-ppt-skill",
+      "description": "[PPT] 归藏网页PPT — 生成横向翻页HTML PPT，双风格（电子杂志风/瑞士国际主义风），22种锁定版式+5套主题色",
+      "category": "办公",
+      "tags": ["PPT", "演示文稿", "演讲", "slides", "HTML", "网页PPT"],
+      "triggers": "需要做PPT/演示文稿/演讲Slides时；用户说做PPT/生成演示文稿/做slides时",
+      "negative_samples": "需要导出为PPTX格式（用ppt-master）；只需要简单Markdown转slides；不需要视觉设计的纯文字PPT",
+      "dependencies": [],
+      "priority": 2
+    },
+    {
+      "name": "ppt-master",
+      "description": "[PPT] PPT大师 — 生成可编辑的PPTX文件，pptxgenjs精确控制，双受众模式，17种配色+9种布局+自动图表",
+      "category": "办公",
+      "tags": ["PPT", "PPTX", "演示", "图表", "幻灯片"],
+      "triggers": "需要生成可编辑的PPTX文件时；需要PPT中包含图表/数据可视化时；需要可直接在PowerPoint中编辑的文件时",
+      "negative_samples": "只需要网页版PPT（用guizang-ppt-skill）；不需要精确元素控制的简单PPT",
+      "dependencies": [],
+      "priority": 2
+    },
+    {
+      "name": "visual-style-ppt-skill",
+      "description": "[PPT] 视觉风格PPT — 视觉驱动的工作流，从参考图提取设计DNA，8种视觉风格，适合品牌统一场景",
+      "category": "办公",
+      "tags": ["PPT", "视觉设计", "品牌", "风格", "设计系统"],
+      "triggers": "需要设计感PPT/品牌视觉统一时；有参考图/截图需要提取设计风格做PPT时",
+      "negative_samples": "已经有明确风格不需要参考；只是快速出内容不需要设计",
+      "dependencies": [],
+      "priority": 3
+    },
+    {
+      "name": "security-guidance",
+      "description": "[研发] 安全审查 — 3层防护审查代码安全性，覆盖注入/XSS/SSRF/硬编码密钥/反序列化/路径遍历等",
+      "category": "研发",
+      "tags": ["安全", "审查", "漏洞", "审计", "防护"],
+      "triggers": "需要审查代码安全性/找安全漏洞时；代码提交前做安全检查时",
+      "negative_samples": "普通代码审查不需要安全专项时（用superpowers-review）",
+      "dependencies": ["superpowers-review"],
+      "priority": 3
+    },
+    {
+      "name": "code-simplifier",
+      "description": "[研发] 代码简化 — 保持功能不变，提升代码可读性和可维护性",
+      "category": "研发",
+      "tags": ["重构", "简化", "优化", "可读性"],
+      "triggers": "代码需要重构/简化/优化可读性时；review后发现代码冗余时",
+      "negative_samples": "功能变更/新增功能（用TDD）；架构级重构",
+      "dependencies": [],
+      "priority": 4
+    },
+    {
+      "name": "ralph-loop",
+      "description": "[研发] Ralph循环迭代 — 快速反馈循环，每次完成后自动继续迭代直到真正完成",
+      "category": "研发",
+      "tags": ["迭代", "循环", "快速反馈", "实验"],
+      "triggers": "需要快速迭代/实验性开发/需要反复打磨时",
+      "negative_samples": "有明确计划不需要迭代时（用writing-plans）",
+      "dependencies": [],
+      "priority": 4
+    },
+    {
+      "name": "ponytail",
+      "description": "[研发] Ponytail精炼代码 — YAGNI驱动，5级决策梯砍掉一切不必要代码。平均减54%代码，-20%成本，100%安全",
+      "category": "研发",
+      "tags": ["精简", "YAGNI", "代码量", "优化", "少即是多"],
+      "triggers": "写代码前需要检查是否过度工程时；代码量看起来太大时；需要精简实现时",
+      "negative_samples": "安全/校验/错误处理代码不能砍；性能关键的场景不能为了少代码牺牲速度",
+      "dependencies": ["code-simplifier"],
+      "priority": 4
+    },
+    {
+      "name": "frontend-design",
+      "description": "[设计] 前端设计 — 从设计系统出发生成风格一致的UI，适合原型/设计稿/组件库",
+      "category": "设计",
+      "tags": ["UI", "UX", "前端", "设计系统", "组件"],
+      "triggers": "需要做前端UI/UX设计/页面设计/组件设计时",
+      "negative_samples": "后端逻辑开发；不需要UI设计的功能开发",
+      "dependencies": [],
+      "priority": 3
+    },
+    {
+      "name": "skill-onboarder",
+      "description": "[系统] Skill接入专员 — 按标准流程接入新技能：获取源码→分析分类→install_skill→更新SKILLS_CATALOG→汇报",
+      "category": "系统",
+      "tags": ["接入", "安装", "集成", "注册"],
+      "triggers": "用户说装新skill/导入技能/把这个加到生态里；需要标准流程接入新技能时",
+      "negative_samples": "只是修改现有skill；不需要安装新技能",
+      "dependencies": [],
+      "priority": 1
+    },
+    {
+      "name": "skill-router",
+      "description": "[路由] 技能总路由 — 分析请求从SKILLS_CATALOG.json中召回并重排选择最匹配的技能",
+      "category": "系统",
+      "tags": ["路由", "调度", "选择", "编排"],
+      "triggers": "有多个技能可能命中时；不确定用哪个技能时；请求复杂可能跨多个技能时；技能数量>5需要路由时",
+      "negative_samples": "已经明确知道用哪个技能时",
+      "dependencies": [],
+      "priority": 1
+    }
+  ],
+  "categories": {
+    "研发": ["superpowers-brainstorming", "superpowers-tdd", "superpowers-debugging", "superpowers-verify", "superpowers-writing-plans", "superpowers-review", "security-guidance", "code-simplifier", "ralph-loop", "ponytail", "grill-me", "diagnosing-bugs", "domain-modeling", "improve-codebase-architecture"],
+    "数据": ["scrapling-agent-skill", "excel-table-processor"],
+    "办公": ["guizang-ppt-skill", "ppt-master", "visual-style-ppt-skill", "premium-visual-guide", "ppt-motion", "ppt-dynamic-layout", "ppt-creative-animation", "ppt-transitions", "ppt-data-visualization", "ppt-douyin-style", "ppt-image-processing", "ppt-workflow"],
+    "设计": ["frontend-design"],
+    "系统": ["skill-router", "skill-onboarder", "skillspector-wrapper", "skillopt-wrapper"],
+    "工具": ["powertoys-skill", "handoff", "cua-skill", "pixelle-video-skill", "agent-reach-skill"],
+    "参考": ["system-prompt-leaks-skill", "writing-great-skills", "skeptical-cognition", "humanize-skill"],
+    "科研": ["ml-intern-skill", "matlab-research", "research-writing", "devils-advocate", "research-pipeline"],
+    "竞赛": ["math-modeling"]
+  }
+}
