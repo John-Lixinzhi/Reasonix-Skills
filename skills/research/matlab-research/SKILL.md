@@ -3,38 +3,61 @@ name: matlab-research
 description: [research] MATLAB research - USE when need MATLAB programming/research plotting/signal processing. DO leverage R2025b official toolkit 20 categories. NOT for Python tasks. Triggers: MATLAB/plotting/signal/computation
 ---
 
-# MATLAB 绉戠爺璁＄畻 & 浣滃浘
+# MATLAB 科研计算 & 作图
 
-鍩轰簬 MathWorks 瀹樻柟 MATLAB Agentic Toolkit锛?0 skill 绫诲埆锛夈€?
-## 浣犵殑 MATLAB 鐜
-- 璺緞锛歚D:\Program Files\MATLAB\R2025b\`
-- 鐗堟湰锛歊2025b锛堟渶鏂扮増锛?- 鏀寔 Agentic Toolkit锛堥渶 R2020b+锛?
-## 瀹樻柟 Toolkit 瑕嗙洊鐨?20 涓鍩?
-### 鏍稿績
-- **MATLAB Core** 鈥?鍩虹璇硶銆佺煩闃佃繍绠椼€佹暟鎹被鍨?- **MATLAB Programming** 鈥?缂栫爜瑙勮寖銆佹€ц兘浼樺寲銆佽皟璇?- **MATLAB Data Import & Analysis** 鈥?鏁版嵁瀵煎叆銆佹竻娲椼€佹帰绱㈡€у垎鏋?- **MATLAB Software Development** 鈥?鐗堟湰鎺у埗銆佹祴璇曘€佹枃妗?- **MATLAB App Building** 鈥?App Designer 鏋勫缓浜や簰寮忓簲鐢?
-### 宸ョ▼涓庣瀛?- **Signal Processing** 鈥?淇″彿婊ゆ尝銆侀璋卞垎鏋愩€佹椂棰戝垎鏋?- **Image Processing & Computer Vision** 鈥?鍥惧儚澧炲己銆佸垎鍓层€佺壒寰佹彁鍙栥€佺洰鏍囨娴?- **Computational Biology** 鈥?鐢熺墿淇℃伅瀛︺€佸熀鍥犲垎鏋愩€佽泲鐧借川缁撴瀯
-- **RF & Mixed-Signal** 鈥?灏勯璁捐銆佹贩鍚堜俊鍙峰垎鏋?- **Radar** 鈥?闆疯揪绯荤粺璁捐銆佹尝褰㈠垎鏋?- **Robotics & Autonomous Systems** 鈥?鏈哄櫒浜烘帶鍒躲€佽矾寰勮鍒?
-### 琛屼笟搴旂敤
-- **Automotive** 鈥?姹借溅绯荤粺浠跨湡銆丄DAS
-- **Aerospace** 鈥?鑸┖鑸ぉ寤烘ā銆佸鑸帶鍒?- **Wireless Communications** 鈥?5G/6G 閫氫俊浠跨湡
-- **Test & Measurement** 鈥?鏁版嵁閲囬泦銆佺‖浠舵祴璇?- **Cloud Solutions** 鈥?MATLAB 浜戠閮ㄧ讲
+基于 MathWorks 官方 MATLAB Agentic Toolkit（20 skill 类别）。
 
-### 浜ゅ弶
-- **AI & Statistics** 鈥?鏈哄櫒瀛︿範銆佹繁搴﹀涔犮€佺粺璁″缓妯?- **Parallel Computing** 鈥?GPU鍔犻€熴€佸苟琛岃绠?- **Reporting & Database Access** 鈥?鎶ュ憡鐢熸垚銆佹暟鎹簱杩炴帴
-- **External Language Interfaces** 鈥?Python/Java/C 璋冪敤
+## 你的 MATLAB 环境
+- 路径：`D:\Program Files\MATLAB\R2025b\`
+- 版本：R2025b（最新版）
+- 支持 Agentic Toolkit（需 R2020b+）
 
-## 绉戠爺浣滃浘鑳藉姏
-MATLAB 浣滃浘姣?Python 鏇寸簿缁嗭細
-- `plot`/`scatter`/`bar`/`histogram` 鈥?鍩虹鍥捐〃
-- `surf`/`mesh`/`contour` 鈥?涓夌淮鍥?- `imagesc`/`imshow` 鈥?鍥惧儚鏄剧ず
-- `subplot`/`tiledlayout` 鈥?澶氬瓙鍥炬帓鐗?- 灞炴€х簿缁嗘帶鍒讹細绾垮銆佸瓧浣撱€侀鑹层€侀€忔槑搴?- 瀵煎嚭锛氱煝閲忓浘锛圥DF/EPS锛夈€侀珮鍒嗚鲸鐜囦綅鍥?
-## 瀹夎 Toolkit锛堝綋浣犳兂璁?AI 鐩磋繛 MATLAB 鏃讹級
+## 官方 Toolkit 覆盖的 20 个领域
+
+### 核心
+- **MATLAB Core** — 基础语法、矩阵运算、数据类型
+- **MATLAB Programming** — 编码规范、性能优化、调试
+- **MATLAB Data Import & Analysis** — 数据导入、清洗、探索性分析
+- **MATLAB Software Development** — 版本控制、测试、文档
+- **MATLAB App Building** — App Designer 构建交互式应用
+
+### 工程与科学
+- **Signal Processing** — 信号滤波、频谱分析、时频分析
+- **Image Processing & Computer Vision** — 图像增强、分割、特征提取、目标检测
+- **Computational Biology** — 生物信息学、基因分析、蛋白质结构
+- **RF & Mixed-Signal** — 射频设计、混合信号分析
+- **Radar** — 雷达系统设计、波形分析
+- **Robotics & Autonomous Systems** — 机器人控制、路径规划
+
+### 行业应用
+- **Automotive** — 汽车系统仿真、ADAS
+- **Aerospace** — 航空航天建模、导航控制
+- **Wireless Communications** — 5G/6G 通信仿真
+- **Test & Measurement** — 数据采集、硬件测试
+- **Cloud Solutions** — MATLAB 云端部署
+
+### 交叉
+- **AI & Statistics** — 机器学习、深度学习、统计建模
+- **Parallel Computing** — GPU加速、并行计算
+- **Reporting & Database Access** — 报告生成、数据库连接
+- **External Language Interfaces** — Python/Java/C 调用
+
+## 科研作图能力
+MATLAB 作图比 Python 更精细：
+- `plot`/`scatter`/`bar`/`histogram` — 基础图表
+- `surf`/`mesh`/`contour` — 三维图
+- `imagesc`/`imshow` — 图像显示
+- `subplot`/`tiledlayout` — 多子图排版
+- 属性精细控制：线宽、字体、颜色、透明度
+- 导出：矢量图（PDF/EPS）、高分辨率位图
+
+## 安装 Toolkit（当你想让 AI 直连 MATLAB 时）
 ```bash
 git clone https://github.com/matlab/matlab-agentic-toolkit.git
 cd matlab-agentic-toolkit
-# 鍦?Claude Code 涓墽琛?
+# 在 Claude Code 中执行:
 # Set up the MATLAB Agentic Toolkit
 ```
 
-## 婧愮爜浣嶇疆
-涓嬭浇鍒?`D:\matlab-agentic-toolkit-main\`
+## 源码位置
+下载到 `D:\matlab-agentic-toolkit-main\`
