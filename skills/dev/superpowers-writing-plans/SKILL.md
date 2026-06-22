@@ -1,33 +1,20 @@
 ---
 name: superpowers-writing-plans
-description: [Superpowers][研发] 编写实现计划 — 触发条件：设计文档已批准/复杂任务需要分解时。将设计拆为2-5分钟小任务，每任务含路径+代码+验证。没计划不执行
+description: [dev][Superpowers] Writing plans - USE after design approved. DO break into small tasks. NOT for trivial tasks. Triggers: plan/break down/implementation plan
 ---
 
-# 编写实现计划
+# Writing Implementation Plans
 
-将批准的设计文档拆分为可执行的任务清单。
+Break approved designs into small, executable tasks.
 
-## 计划格式
+## Each Task Should
 
-每个任务应该：
-1. **2-5 分钟**可以完成（或更小）
-2. 有确切的**文件路径**
-3. 有明确的**完成标准**
-4. 有**验证步骤**
+- Take 2-5 minutes
+- Specify exact files
+- Include verification steps
+- Have clear completion criteria
 
-## 任务粒度指南
+## Order
 
-| 类型 | 一个任务 |
-|------|---------|
-| 新函数 | 一个函数 + 它的测试 |
-| 新文件 | 一个文件，不要跨多个文件 |
-| 重构 | 一个关注点，不要混合重构 |
-| Bug 修复 | 一个根因 + 它的修复 |
-
-## 注意事项
-
-- **YAGNI** — 只实现设计文档中指定的功能，不要超前
-- **DRY** — 检查是否有重复逻辑
-- **单一职责** — 每个任务只做一件事
-- 按依赖顺序排列任务
-- 先做数据模型/接口，再做 UI/展示层
+- Data models first, then UI
+- Dependencies before dependents
