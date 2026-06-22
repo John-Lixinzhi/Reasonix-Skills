@@ -1,30 +1,27 @@
 ---
 name: cua-skill
-description: [工具] CUA电脑操控 — 触发条件：需要控制电脑桌面/自动化操作软件/模拟鼠标键盘时。开源计算机使用Agent基础设施。支持后台操控macOS/Windows/Linux桌面，不抢光标不抢焦点。自带MCP服务器可接入
+description: [tools] CUA computer control - USE when need AI to control desktop/mouse/keyboard. DO open-source Computer-Use Agent infra for macOS/Windows/Linux. NOT for web scraping. Triggers: desktop/click/type/control PC/automate
 ---
 
-# CUA — 计算机使用 Agent
+# CUA 鈥?璁＄畻鏈轰娇鐢?Agent
 
-来源：trycua/cua (18.6k⭐)
+鏉ユ簮锛歵rycua/cua (18.6k猸?
 
-让 AI 能操控电脑桌面的基础设施——点鼠标、敲键盘、截图、运行命令。
-
-## 核心组件
-- **cua-driver**：后台桌面驱动（macOS/Windows/Linux），不抢光标不抢焦点
-- **cua-sandbox**：沙箱环境 SDK，创建隔离的虚拟机/容器
-- **cua-bench**：基准测试和强化学习环境
-- **Lume**：macOS 虚拟机管理（Apple Silicon）
-
-## 接入方式
+璁?AI 鑳芥搷鎺х數鑴戞闈㈢殑鍩虹璁炬柦鈥斺€旂偣榧犳爣銆佹暡閿洏銆佹埅鍥俱€佽繍琛屽懡浠ゃ€?
+## 鏍稿績缁勪欢
+- **cua-driver**锛氬悗鍙版闈㈤┍鍔紙macOS/Windows/Linux锛夛紝涓嶆姠鍏夋爣涓嶆姠鐒︾偣
+- **cua-sandbox**锛氭矙绠辩幆澧?SDK锛屽垱寤洪殧绂荤殑铏氭嫙鏈?瀹瑰櫒
+- **cua-bench**锛氬熀鍑嗘祴璇曞拰寮哄寲瀛︿範鐜
+- **Lume**锛歮acOS 铏氭嫙鏈虹鐞嗭紙Apple Silicon锛?
+## 鎺ュ叆鏂瑰紡
 ```bash
-# Windows 安装
+# Windows 瀹夎
 irm https://raw.githubusercontent.com/trycua/cua/main/libs/cua-driver/scripts/install.ps1 | iex
 
-# 接入 Claude Code 作为 MCP
+# 鎺ュ叆 Claude Code 浣滀负 MCP
 claude mcp add --transport stdio cua-driver -- cua-driver mcp
 ```
 
-## 对我生态的价值
-- 如果接入，我可以直接操作你的电脑桌面
-- 打开软件、点击按钮、截图验证、跨应用操作
-- 配合 Scrapling 的截图功能可以实现完整的视觉闭环
+## 瀵规垜鐢熸€佺殑浠峰€?- 濡傛灉鎺ュ叆锛屾垜鍙互鐩存帴鎿嶄綔浣犵殑鐢佃剳妗岄潰
+- 鎵撳紑杞欢銆佺偣鍑绘寜閽€佹埅鍥鹃獙璇併€佽法搴旂敤鎿嶄綔
+- 閰嶅悎 Scrapling 鐨勬埅鍥惧姛鑳藉彲浠ュ疄鐜板畬鏁寸殑瑙嗚闂幆
