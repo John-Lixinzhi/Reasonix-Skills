@@ -1,29 +1,23 @@
 ---
 name: superpowers-brainstorming
-description: [研发][Superpowers] 设计探讨 — USE when 提新需求/新功能/新项目/需求模糊不确定怎么做。DO 通过问答澄清需求→出设计文档→用户确认后才编码。NOT for 已有明确设计只需执行/简单bug修复/纯技术咨询。Triggers: 帮我设计/想做个/需求分析/先想想
+description: [dev][Superpowers] Design discussion - USE when new feature/requirements unclear. DO clarify via Q&A, produce design doc, get approval before coding. NOT for known requirements. Triggers: help me design/think about/plan
 ---
 
-# Brainstorming — 将想法变成设计
+# Brainstorming
 
-在写任何代码之前，先通过对话理清需求。
+Turn fuzzy ideas into clear designs through structured conversation.
 
-## 核心规则
+## When to use
 
-在用户批准设计之前，**不得**调用任何实现 skill、写代码、搭项目或任何实现行为。这条适用于所有项目，无论看起来多简单。
+- Starting a new feature or project
+- Requirements are vague or incomplete
+- Before writing any code
 
-## 工作流
+## Process
 
-1. **探索项目上下文** — 检查现有文件、文档、近期提交
-2. **逐一提问澄清** — 一次一个问题，理解目的/约束/成功标准
-3. **提出 2-3 种方案** — 带权衡分析和你的推荐
-4. **分块呈现设计** — 按复杂度分块，每块让用户确认
-5. **写设计文档** — 保存到项目文档目录
-6. **用户审阅文档** — 让用户确认后再推进
-7. **进入实现阶段** — 编写实现计划
-
-## 关键原则
-
-- 不要跳过这步说"太简单不需要设计"——简单的项目恰恰最容易因未说清的假设导致返工
-- 设计可以很短（几句话），但必须呈现并获得批准
-- 每轮只问一个问题
-- 优先用选择题，但也开放提问
+1. Explore project context
+2. Ask clarifying questions
+3. Propose approaches with trade-offs
+4. Present design for approval
+5. Save design document
+6. Proceed to implementation planning
