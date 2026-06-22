@@ -1,49 +1,36 @@
 ---
 name: powertoys-skill
-description: [工具] PowerToys 工具集 — 触发条件：需要Windows增强功能/取色/批量重命名/窗口布局/图片缩放时。FancyZones窗口布局/颜色取色器/PowerRename批量重命名/ImageResizer图片缩放/键盘管理器/高级粘贴等。通过命令行调用PowerToys工具
+description: [tools] PowerToys Windows utilities - USE when need color picker/batch rename/window layout. DO reference PowerToys tools. NOT for non-Windows. Triggers: color picker/rename/window layout/screenshot/ocr
 ---
 
-# PowerToys Windows 工具集
+# PowerToys Windows 宸ュ叿闆?
+Microsoft PowerToys 鏄?Windows 绯荤粺澧炲己宸ュ叿闆嗐€備互涓嬪姛鑳藉彲閫氳繃鍛戒护琛岃皟鐢ㄦ潵杈呭姪宸ヤ綔銆?
+## 鍙敤宸ュ叿
 
-Microsoft PowerToys 是 Windows 系统增强工具集。以下功能可通过命令行调用来辅助工作。
+### 棰滆壊鍙栬壊鍣?(Color Picker)
+- 蹇嵎閿細Win+Shift+C
+- 鍙栬壊鍚庤嚜鍔ㄥ鍒跺埌鍓创鏉匡紝鏀寔 HEX/RGB/HSL 鏍煎紡
+- 浣跨敤鍦烘櫙锛氫粠缃戦〉/鍥剧墖涓彁鍙栭厤鑹?
+### FancyZones 绐楀彛甯冨眬
+- 蹇嵎閿細Win+Shift+`锛堝弽寮曞彿锛?- 鑷畾涔夌獥鍙ｅ竷灞€鍖哄煙锛屾嫋鎷界獥鍙ｈ嚜鍔ㄥ惛闄?- 浣跨敤鍦烘櫙锛氬绐楀彛瀵规瘮鎺掔増鏃朵娇鐢?
+### PowerRename 鎵归噺閲嶅懡鍚?- 鍙抽敭鏂囦欢 鈫?PowerRename
+- 鏀寔姝ｅ垯琛ㄨ揪寮忋€佹壒閲忔浛鎹€佺紪鍙?- 浣跨敤鍦烘櫙锛氭壒閲忛噸鍛藉悕鍥剧墖/鏂囦欢
 
-## 可用工具
+### Image Resizer 鍥剧墖缂╂斁
+- 鍙抽敭鍥剧墖 鈫?璋冩暣鍥剧墖澶у皬
+- 鏀寔棰勮灏哄鎴栬嚜瀹氫箟
+- 浣跨敤鍦烘櫙锛氭壒閲忚皟鏁村浘鐗囧昂瀵?
+### 閿洏绠＄悊鍣?(Keyboard Manager)
+- 閲嶆柊鏄犲皠鎸夐敭鍜屽揩鎹烽敭
+- 浣跨敤鍦烘櫙锛氳嚜瀹氫箟蹇嵎閿彁楂樻晥鐜?
+### 楂樼骇绮樿创 (Advanced Paste)
+- Win+Shift+V 璋冨嚭楂樼骇绮樿创
+- 鏀寔锛氱函鏂囨湰/Markdown/JSON 鏍煎紡杞崲
+- 浣跨敤鍦烘櫙锛氱矘璐存椂杞崲鏍煎紡
 
-### 颜色取色器 (Color Picker)
-- 快捷键：Win+Shift+C
-- 取色后自动复制到剪贴板，支持 HEX/RGB/HSL 格式
-- 使用场景：从网页/图片中提取配色
-
-### FancyZones 窗口布局
-- 快捷键：Win+Shift+`（反引号）
-- 自定义窗口布局区域，拖拽窗口自动吸附
-- 使用场景：多窗口对比排版时使用
-
-### PowerRename 批量重命名
-- 右键文件 → PowerRename
-- 支持正则表达式、批量替换、编号
-- 使用场景：批量重命名图片/文件
-
-### Image Resizer 图片缩放
-- 右键图片 → 调整图片大小
-- 支持预设尺寸或自定义
-- 使用场景：批量调整图片尺寸
-
-### 键盘管理器 (Keyboard Manager)
-- 重新映射按键和快捷键
-- 使用场景：自定义快捷键提高效率
-
-### 高级粘贴 (Advanced Paste)
-- Win+Shift+V 调出高级粘贴
-- 支持：纯文本/Markdown/JSON 格式转换
-- 使用场景：粘贴时转换格式
-
-### 文本提取器 (Text Extractor)
+### 鏂囨湰鎻愬彇鍣?(Text Extractor)
 - Win+Shift+T
-- 从屏幕任意区域提取文字（OCR）
-- 使用场景：从图片/视频中提取文字
-
-### 鼠标实用工具 (Mouse utilities)
-- 查找我的鼠标：Ctrl（连按两次）
-- 鼠标高亮：显示点击效果
-- 使用场景：演示时引导观众视线
+- 浠庡睆骞曚换鎰忓尯鍩熸彁鍙栨枃瀛楋紙OCR锛?- 浣跨敤鍦烘櫙锛氫粠鍥剧墖/瑙嗛涓彁鍙栨枃瀛?
+### 榧犳爣瀹炵敤宸ュ叿 (Mouse utilities)
+- 鏌ユ壘鎴戠殑榧犳爣锛欳trl锛堣繛鎸変袱娆★級
+- 榧犳爣楂樹寒锛氭樉绀虹偣鍑绘晥鏋?- 浣跨敤鍦烘櫙锛氭紨绀烘椂寮曞瑙備紬瑙嗙嚎
