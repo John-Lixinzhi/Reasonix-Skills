@@ -1,6 +1,6 @@
 ---
 name: math-modeling
-description: [绔炶禌] 鏁板寤烘ā绔炶禌 鈥?USE when 鍙傚姞鏁版ā姣旇禌/闇€瑕佸缓妯?棰勬祴/鍒嗙被/浼樺寲/璇勪环銆侱O 妯″瀷閫夋嫨鈫掍唬鐮佹ā鏉库啋璁烘枃鍐欎綔銆侼OT for 鏃ュ父鏁版嵁鍒嗘瀽锛堢敤scrapling/excel锛夈€俆riggers: 鏁板寤烘ā/鍥借禌/缇庤禌/寤烘ā姣旇禌/妯″瀷姹傝В
+description: [competition] Math modeling - USE when participating in math competition/need modeling. DO model selection, code, paper. NOT for daily analysis. Triggers: math modeling/competition/model building/regression
 ---
 
 # 鏁板寤烘ā绔炶禌
