@@ -1,28 +1,23 @@
 ---
 name: excel-table-processor
-description: 处理学生请假/返校等Excel统计表的skill：保留原始格式（合并单元格、样式、汇总行），做班级名标准化（2字+3数字）、按拼音排序、统一学院名称、重新编号、按日期筛选22号+，使用exceljs原地改值不损格式。
----
+description: 澶勭悊瀛︾敓璇峰亣/杩旀牎绛塃xcel缁熻琛ㄧ殑skill锛氫繚鐣欏師濮嬫牸寮忥紙鍚堝苟鍗曞厓鏍笺€佹牱寮忋€佹眹鎬昏锛夛紝鍋氱彮绾у悕鏍囧噯鍖栵紙2瀛?3鏁板瓧锛夈€佹寜鎷奸煶鎺掑簭銆佺粺涓€瀛﹂櫌鍚嶇О銆侀噸鏂扮紪鍙枫€佹寜鏃ユ湡绛涢€?2鍙?锛屼娇鐢╡xceljs鍘熷湴鏀瑰€间笉鎹熸牸寮忋€?---
 
-# Excel 统计表处理 Skill
+# Excel 缁熻琛ㄥ鐞?Skill
 
-## 适用场景
-处理学生返校/请假等统计 Excel 表格，需要：
-- 保留原始格式（合并单元格、列宽、行高、字体、对齐、汇总行）
-- 修改数据内容（班级标准化、排序、统一学院、重新编号）
-- 按日期筛选（如保留22号以后的记录）
+## 閫傜敤鍦烘櫙
+澶勭悊瀛︾敓杩旀牎/璇峰亣绛夌粺璁?Excel 琛ㄦ牸锛岄渶瑕侊細
+- 淇濈暀鍘熷鏍煎紡锛堝悎骞跺崟鍏冩牸銆佸垪瀹姐€佽楂樸€佸瓧浣撱€佸榻愩€佹眹鎬昏锛?- 淇敼鏁版嵁鍐呭锛堢彮绾ф爣鍑嗗寲銆佹帓搴忋€佺粺涓€瀛﹂櫌銆侀噸鏂扮紪鍙凤級
+- 鎸夋棩鏈熺瓫閫夛紙濡備繚鐣?2鍙蜂互鍚庣殑璁板綍锛?
+## 鏍稿績鍘熷垯
+**涓嶈鐢?`xlsx`锛圫heetJS锛夌殑 `aoa_to_sheet` 閲嶆柊寤鸿〃**锛岄偅浼氫涪澶辨墍鏈夋牸寮忋€?**蹇呴』鐢?`exceljs` 鍘熷湴淇敼鍗曞厓鏍肩殑 `.value`**锛屾牱寮忓畬鍏ㄤ笉鍔ㄣ€?
+## 姝ラ
 
-## 核心原则
-**不要用 `xlsx`（SheetJS）的 `aoa_to_sheet` 重新建表**，那会丢失所有格式。
-**必须用 `exceljs` 原地修改单元格的 `.value`**，样式完全不动。
-
-## 步骤
-
-### 1. 安装依赖
+### 1. 瀹夎渚濊禆
 ```bash
-cd /d <桌面路径> && npm install exceljs
+cd /d <妗岄潰璺緞> && npm install exceljs
 ```
 
-### 2. 脚本核心结构
+### 2. 鑴氭湰鏍稿績缁撴瀯
 
 ```javascript
 const ExcelJS = require('exceljs');
@@ -37,7 +32,7 @@ async function process(inputFile, outputFile, options = {}) {
   const ws = wb.getWorksheet(1);
   const totalRows = ws.rowCount;
 
-  // ========== A. 读取所有单元格到内存 ==========
+  // ========== A. 璇诲彇鎵€鏈夊崟鍏冩牸鍒板唴瀛?==========
   const mem = {};
   for (let r = 1; r <= totalRows; r++) {
     const row = ws.getRow(r);
@@ -51,15 +46,15 @@ async function process(inputFile, outputFile, options = {}) {
     }
   }
 
-  // ========== B. 识别行类型 ==========
-  // Row 1: 标题, Row 2: 表头
-  // 数据行: D列(4)有值且不是汇总行
-  // 汇总行: D列包含"学院总人数"/"实到人数"/"未到人数"
+  // ========== B. 璇嗗埆琛岀被鍨?==========
+  // Row 1: 鏍囬, Row 2: 琛ㄥご
+  // 鏁版嵁琛? D鍒?4)鏈夊€间笖涓嶆槸姹囨€昏
+  // 姹囨€昏: D鍒楀寘鍚?瀛﹂櫌鎬讳汉鏁?/"瀹炲埌浜烘暟"/"鏈埌浜烘暟"
   const dataRows = [], tailRows = [];
   for (let r = 3; r <= totalRows; r++) {
     const v = mem[r]?.[4]?.value;
     if (v && typeof v === 'string') {
-      if (/学院总人数|实到人数|未到人数/.test(v)) tailRows.push(r);
+      if (/瀛﹂櫌鎬讳汉鏁皘瀹炲埌浜烘暟|鏈埌浜烘暟/.test(v)) tailRows.push(r);
       else dataRows.push(r);
     } else {
       tailRows.push(r);
@@ -68,7 +63,7 @@ async function process(inputFile, outputFile, options = {}) {
 
   function gv(r, c) { return mem[r]?.[c]?.value ?? ''; }
 
-  // ========== C. 提取并处理数据 ==========
+  // ========== C. 鎻愬彇骞跺鐞嗘暟鎹?==========
   let records = dataRows.map(r => ({
     rowNum: r,
     cls: String(gv(r, 3) || ''),
@@ -76,17 +71,15 @@ async function process(inputFile, outputFile, options = {}) {
     returnTime: gv(r, 8),
   }));
 
-  // 班级标准化
-  records.forEach(r => {
+  // 鐝骇鏍囧噯鍖?  records.forEach(r => {
     r.cls = r.cls
-      .replace(/^信息工程/, '信息')
-      .replace(/^电子信息工程/, '电信')
-      .replace(/^通信工程/, '通信')
-      .replace(/^集成电路/, '集电');
+      .replace(/^淇℃伅宸ョ▼/, '淇℃伅')
+      .replace(/^鐢靛瓙淇℃伅宸ョ▼/, '鐢典俊')
+      .replace(/^閫氫俊宸ョ▼/, '閫氫俊')
+      .replace(/^闆嗘垚鐢佃矾/, '闆嗙數');
   });
 
-  // 排序（按拼音）
-  records.sort((a, b) => {
+  // 鎺掑簭锛堟寜鎷奸煶锛?  records.sort((a, b) => {
     const ma = a.cls.match(/^([^\d]+)(\d+)$/);
     const mb = b.cls.match(/^([^\d]+)(\d+)$/);
     if (ma && mb) {
@@ -96,11 +89,11 @@ async function process(inputFile, outputFile, options = {}) {
     return a.cls.localeCompare(b.cls, 'zh-CN');
   });
 
-  // ========== D. 写回数据（只改value，style不动） ==========
+  // ========== D. 鍐欏洖鏁版嵁锛堝彧鏀箆alue锛宻tyle涓嶅姩锛?==========
   for (let i = 0; i < records.length; i++) {
     const row = ws.getRow(dataRows[i]);
-    row.getCell(1).value = i + 1;  // 重新编号
-    row.getCell(2).value = '通信与人工智能学院、集成电路学院';  // 统一学院
+    row.getCell(1).value = i + 1;  // 閲嶆柊缂栧彿
+    row.getCell(2).value = '閫氫俊涓庝汉宸ユ櫤鑳藉闄€侀泦鎴愮數璺闄?;  // 缁熶竴瀛﹂櫌
     row.getCell(3).value = records[i].cls;
     row.getCell(4).value = String(records[i].name).trim();
     row.getCell(5).value = String(gv(records[i].rowNum, 5) || '').trim();
@@ -113,21 +106,20 @@ async function process(inputFile, outputFile, options = {}) {
   await wb.xlsx.writeFile(outputFile);
 }
 
-// ========== 筛选版（22号+） ==========
-// 同上 + 删除中间行 + 修正合并
+// ========== 绛涢€夌増锛?2鍙?锛?==========
+// 鍚屼笂 + 鍒犻櫎涓棿琛?+ 淇鍚堝苟
 async function processFiltered(inputFile, outputFile) {
   const wb = new ExcelJS.Workbook();
   await wb.xlsx.readFile(inputFile);
   const ws = wb.getWorksheet(1);
   const merges = ws.model.merges ? [...ws.model.merges] : [];
 
-  // ... 同样读内存、识别行、提取数据、标准化、排序 ...
+  // ... 鍚屾牱璇诲唴瀛樸€佽瘑鍒銆佹彁鍙栨暟鎹€佹爣鍑嗗寲銆佹帓搴?...
 
-  // 筛选：保留22号+，排除21号
-  function isDate21(t) {
+  // 绛涢€夛細淇濈暀22鍙?锛屾帓闄?1鍙?  function isDate21(t) {
     if (!t) return false;
     const s = String(t).trim();
-    return /21[号日]/.test(s) || /21[晚早中下夜点时分]/.test(s);
+    return /21[鍙锋棩]/.test(s) || /21[鏅氭棭涓笅澶滅偣鏃跺垎]/.test(s);
   }
   const keep = records.filter(r => {
     const t = r.returnTime;
@@ -136,16 +128,14 @@ async function processFiltered(inputFile, outputFile) {
     return true;
   });
 
-  // 写数据到前 N 行
-  // 删除中间多余行（从下往上）
+  // 鍐欐暟鎹埌鍓?N 琛?  // 鍒犻櫎涓棿澶氫綑琛岋紙浠庝笅寰€涓婏級
   const firstDel = dataRows[0] + keep.length;
   const lastDel = tailRows[0] - 1;
   if (firstDel <= lastDel) {
     for (let r = lastDel; r >= firstDel; r--) ws.spliceRows(r, 1);
   }
 
-  // 修正合并单元格（汇总行合并调整到新行号）
-  if (merges.length > 0) {
+  // 淇鍚堝苟鍗曞厓鏍硷紙姹囨€昏鍚堝苟璋冩暣鍒版柊琛屽彿锛?  if (merges.length > 0) {
     const newLastRow = ws.rowCount;
     const newMerges = [];
     for (const m of merges) {
@@ -154,8 +144,7 @@ async function processFiltered(inputFile, outputFile) {
       if (parts) {
         const r2 = parseInt(parts[4], 10);
         if (r2 > dataRows[dataRows.length-1]) {
-          // 尾部合并调整到新最后一行
-          newMerges.push({ start: { row: newLastRow, col: 1 }, end: { row: newLastRow, col: 8 } });
+          // 灏鹃儴鍚堝苟璋冩暣鍒版柊鏈€鍚庝竴琛?          newMerges.push({ start: { row: newLastRow, col: 1 }, end: { row: newLastRow, col: 8 } });
         } else {
           newMerges.push(m);
         }
@@ -168,11 +157,9 @@ async function processFiltered(inputFile, outputFile) {
 }
 ```
 
-## 关键要点
-1. **永远用 `exceljs`**，不要用 `xlsx`（SheetJS）的 `aoa_to_sheet`
-2. **只改 `.value`**，不改 `.style`，样式自然保留
-3. 先读所有数据到内存再处理，避免读写交叉
-4. `spliceRows` 删除行时**从下往上**删，避免行号变化
-5. 删除行后要**手动修正合并单元格**的引用
-6. 汇总行如果被清空了值要补回 A 列，并重新 merged
-7. 班级标准化规则按需调整：信息工程→信息、电子信息工程→电信、通信工程→通信、集成电路→集电
+## 鍏抽敭瑕佺偣
+1. **姘歌繙鐢?`exceljs`**锛屼笉瑕佺敤 `xlsx`锛圫heetJS锛夌殑 `aoa_to_sheet`
+2. **鍙敼 `.value`**锛屼笉鏀?`.style`锛屾牱寮忚嚜鐒朵繚鐣?3. 鍏堣鎵€鏈夋暟鎹埌鍐呭瓨鍐嶅鐞嗭紝閬垮厤璇诲啓浜ゅ弶
+4. `spliceRows` 鍒犻櫎琛屾椂**浠庝笅寰€涓?*鍒狅紝閬垮厤琛屽彿鍙樺寲
+5. 鍒犻櫎琛屽悗瑕?*鎵嬪姩淇鍚堝苟鍗曞厓鏍?*鐨勫紩鐢?6. 姹囨€昏濡傛灉琚竻绌轰簡鍊艰琛ュ洖 A 鍒楋紝骞堕噸鏂?merged
+7. 鐝骇鏍囧噯鍖栬鍒欐寜闇€璋冩暣锛氫俊鎭伐绋嬧啋淇℃伅銆佺數瀛愪俊鎭伐绋嬧啋鐢典俊銆侀€氫俊宸ョ▼鈫掗€氫俊銆侀泦鎴愮數璺啋闆嗙數
