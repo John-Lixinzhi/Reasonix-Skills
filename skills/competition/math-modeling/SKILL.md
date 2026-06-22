@@ -3,34 +3,50 @@ name: math-modeling
 description: [competition] Math modeling - USE when participating in math competition/need modeling. DO model selection, code, paper. NOT for daily analysis. Triggers: math modeling/competition/model building/regression
 ---
 
-# 鏁板寤烘ā绔炶禌
+# 数学建模竞赛
 
-瑕嗙洊鍥借禌/缇庤禌/鍗庝负鏉?鐢靛伐鏉?Mathorcup绛変富娴佽禌浜嬨€?
-## 涓€銆佹ā鍨嬪垎绫婚€熸煡
+覆盖国赛/美赛/华为杯/电工杯/Mathorcup等主流赛事。
 
-### 棰勬祴妯″瀷
-- **鍥炲綊鍒嗘瀽**锛氱嚎鎬?澶氬厓/Logistic鍥炲綊
-- **XGBoost**锛氭瀬绔搴︽彁鍗囨爲锛屽垎绫?+ 鍥炲綊 + 鐗瑰緛閲嶈鎬у垎鏋?- **鐏拌壊棰勬祴 GM(1,1)**锛氬皬鏍锋湰鏁版嵁棰勬祴
-- **鏃堕棿搴忓垪**锛欰R/MA/ARIMA/LSTM
-- **寰垎鏂圭▼**锛歄DE/SDE/PDE 鍔ㄦ€佸缓妯?- **椹皵鍙か棰勬祴**锛氱姸鎬佽浆绉婚娴?- **鏀寔鍚戦噺鏈哄洖褰掞紙SVR锛?*锛氬皬鏍锋湰闈炵嚎鎬ч娴?
-### 璇勪环妯″瀷
-- **灞傛鍒嗘瀽娉?AHP**锛氫富瑙傝祴鏉?- **鐔垫潈娉?*锛氬瑙傝祴鏉?- **TOPSIS**锛氶€艰繎鐞嗘兂瑙ｆ帓搴?- **妯＄硦缁煎悎璇勪环**锛氬鍥犵礌妯＄硦璇勫垽
-- **涓绘垚鍒嗗垎鏋?PCA**锛氶檷缁?缁煎悎璇勪环
-- **鏁版嵁鍖呯粶鍒嗘瀽 DEA**锛氭晥鐜囪瘎浠?- **绉╁拰姣旀硶 RSR**锛氱粺璁¤瘎浠?
-### 浼樺寲妯″瀷
-- **绾挎€?鏁存暟/闈炵嚎鎬ц鍒?*锛氬熀纭€浼樺寲
-- **閬椾紶绠楁硶**锛氬叏灞€鎼滅储浼樺寲
-- **绮掑瓙缇ょ畻娉?PSO**锛氱兢浣撴櫤鑳戒紭鍖?- **妯℃嫙閫€鐏?*锛歍SP/鑳屽寘闂
-- **澶氱洰鏍囪鍒?*锛氬垎灞傚簭鍒楁硶/Pareto鏈€浼?- **鍔ㄦ€佽鍒?*锛氬闃舵鍐崇瓥
-- **鍥捐妯″瀷**锛氭渶鐭矾寰?Dijkstra/Floyd)/鏈€灏忕敓鎴愭爲/鏈€澶ф祦
+## 一、模型分类速查
 
-### 鍒嗙被妯″瀷
-- **SVM**锛氭渶浼樿秴骞抽潰鍒嗙被
-- **闅忔満妫灄**锛氶泦鎴愬涔犲垎绫?- **XGBoost/LightGBM**锛氭搴︽彁鍗囧垎绫?- **KNN**锛氭渶杩戦偦鍒嗙被
-- **鏈寸礌璐濆彾鏂?*锛氭鐜囧垎绫?- **绁炵粡缃戠粶**锛氭繁搴﹀涔犲垎绫?
-## 浜屻€丳ython 閫氱敤浠ｇ爜妯℃澘
+### 预测模型
+- **回归分析**：线性/多元/Logistic回归
+- **XGBoost**：极端梯度提升树，分类 + 回归 + 特征重要性分析
+- **灰色预测 GM(1,1)**：小样本数据预测
+- **时间序列**：AR/MA/ARIMA/LSTM
+- **微分方程**：ODE/SDE/PDE 动态建模
+- **马尔可夫预测**：状态转移预测
+- **支持向量机回归（SVR）**：小样本非线性预测
 
-### XGBoost 鍒嗙被
+### 评价模型
+- **层次分析法 AHP**：主观赋权
+- **熵权法**：客观赋权
+- **TOPSIS**：逼近理想解排序
+- **模糊综合评价**：多因素模糊评判
+- **主成分分析 PCA**：降维+综合评价
+- **数据包络分析 DEA**：效率评价
+- **秩和比法 RSR**：统计评价
+
+### 优化模型
+- **线性/整数/非线性规划**：基础优化
+- **遗传算法**：全局搜索优化
+- **粒子群算法 PSO**：群体智能优化
+- **模拟退火**：TSP/背包问题
+- **多目标规划**：分层序列法/Pareto最优
+- **动态规划**：多阶段决策
+- **图论模型**：最短路径(Dijkstra/Floyd)/最小生成树/最大流
+
+### 分类模型
+- **SVM**：最优超平面分类
+- **随机森林**：集成学习分类
+- **XGBoost/LightGBM**：梯度提升分类
+- **KNN**：最近邻分类
+- **朴素贝叶斯**：概率分类
+- **神经网络**：深度学习分类
+
+## 二、Python 通用代码模板
+
+### XGBoost 分类
 ```python
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -47,7 +63,7 @@ y_pred = model.predict(X_test)
 print(accuracy_score(y_test, y_pred))
 ```
 
-### XGBoost 鍥炲綊
+### XGBoost 回归
 ```python
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
@@ -56,13 +72,19 @@ model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 ```
 
-## 涓夈€佽鏂囧啓浣滆鐐?- 缁撴瀯锛氭憳瑕佲啋闂閲嶈堪鈫掓ā鍨嬪亣璁锯啋绗﹀彿璇存槑鈫掓ā鍨嬪缓绔嬧啋姹傝В鈫掔粨鏋滃垎鏋愨啋浼樼己鐐?- 鎽樿鏈€閲嶈锛佽瘎瀹″厛鐪嬫憳瑕?- LaTeX 妯℃澘锛氬浗璧?缇庤禌鍚勬湁涓撶敤妯℃澘
-- 鍥捐〃娓呮櫚锛屽叕寮忚鑼?
-## 鍥涖€佸父鐢ㄨ蒋浠?- MATLAB / Python + Jupyter
-- SPSS / Stata 缁熻
-- Lingo / Gurobi 浼樺寲姹傝В
-- LaTeX / Word 鎺掔増
-- Visio / Origin / AxGlyph 缁樺浘
+## 三、论文写作要点
+- 结构：摘要→问题重述→模型假设→符号说明→模型建立→求解→结果分析→优缺点
+- 摘要最重要！评审先看摘要
+- LaTeX 模板：国赛/美赛各有专用模板
+- 图表清晰，公式规范
 
-## 浜斻€佸弬鑰冭祫鏂?- GitHub 瀹濊棌搴擄細personqianduixue/Math_Model (4.6k猸?
-  - 鍖呭惈鍥借禌/缇庤禌/鐮旇禌璁烘枃銆佺畻娉曚唬鐮併€丩aTeX妯℃澘銆佷功绫?00+鏈?
+## 四、常用软件
+- MATLAB / Python + Jupyter
+- SPSS / Stata 统计
+- Lingo / Gurobi 优化求解
+- LaTeX / Word 排版
+- Visio / Origin / AxGlyph 绘图
+
+## 五、参考资料
+- GitHub 宝藏库：personqianduixue/Math_Model (4.6k⭐)
+  - 包含国赛/美赛/研赛论文、算法代码、LaTeX模板、书籍100+本
