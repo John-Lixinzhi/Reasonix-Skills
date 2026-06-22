@@ -1,6 +1,6 @@
 ---
 name: research-pipeline
-description: [绉戠爺] 绉戠爺Pipeline 鈥?USE when 寮€濮嬪畬鏁寸爺绌堕」鐩?浠庣爺绌跺埌鍐欎綔鍒板绋块渶鍏ㄦ祦绋嬬鐞嗐€侱O 10闃舵缂栨帓鍣?瀹屾暣鎬ч椄闂ㄣ€侼OT for 鍗曠嫭鍐欎綔浠诲姟锛堢敤research-writing锛夈€俆riggers: 鐮旂┒娴佺▼/浠?鍒?鍐欒鏂?绉戠爺椤圭洰/瀹屾暣鐮旂┒
+description: [research] Research pipeline - USE when starting a complete research project. DO 10-stage orchestrator + integrity gates. NOT for writing-only tasks. Triggers: research project/full pipeline/from scratch
 ---
 
 # 绉戠爺 Pipeline 宸ヤ綔娴?
