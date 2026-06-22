@@ -1,24 +1,20 @@
 ---
 name: agent-reach-skill
-description: [工具] Agent-Reach 全网采集 — USE when 需要从Twitter/YouTube/B站/小红书/Reddit等平台采集数据。DO 一句话安装，零API费采集13+平台。NOT for 普通网页抓取（用Scrapling）。Triggers: 搜推特/查B站/看小红书/全网调研/采集数据/搜YouTube
+description: [tools] Agent-Reach data collection - USE when need data from Twitter/Bilibili/Xiaohongshu/Reddit. DO one-command install, zero-API-fee. NOT for general web scraping. Triggers: twitter/bilibili/social media/scrape
 ---
 
-# Agent-Reach — 全网数据采集
+# Agent-Reach 鈥?鍏ㄧ綉鏁版嵁閲囬泦
 
-来源：Panniantong/Agent-Reach (37.6k⭐)
+鏉ユ簮锛歅anniantong/Agent-Reach (37.6k猸?
 
-给你的 AI Agent 一键装上互联网采集能力。
+缁欎綘鐨?AI Agent 涓€閿涓婁簰鑱旂綉閲囬泦鑳藉姏銆?
+## 鏀寔骞冲彴
+- **闆堕厤缃嵆鐢?*锛氱綉椤?Jina Reader銆乊ouTube瀛楀箷/鎼滅储銆丷SS璁㈤槄銆丟itHub浠撳簱銆乂2EX銆丅绔?- **閰嶇疆鍚庤В閿?*锛歍witter(鎼滅储+鏃堕棿绾?銆佸皬绾功(鎼滅储+闃呰)銆丷eddit銆丩inkedIn銆侀洩鐞冦€佸皬瀹囧畽鎾
 
-## 支持平台
-- **零配置即用**：网页/Jina Reader、YouTube字幕/搜索、RSS订阅、GitHub仓库、V2EX、B站
-- **配置后解锁**：Twitter(搜索+时间线)、小红书(搜索+阅读)、Reddit、LinkedIn、雪球、小宇宙播客
-
-## 一句话安装
+## 涓€鍙ヨ瘽瀹夎
 ```
-帮我安装 Agent Reach：https://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md
+甯垜瀹夎 Agent Reach锛歨ttps://raw.githubusercontent.com/Panniantong/agent-reach/main/docs/install.md
 ```
 
-## 对我生态的价值
-- 补充 Scrapling 无法覆盖的中文平台（B站/小红书/公众号）
-- 提供 Twitter/YouTube 等社交平台的结构化数据
-- 与 Scrapling 互补：Scrapling 爬网页，Agent-Reach 采平台
+## 瀵规垜鐢熸€佺殑浠峰€?- 琛ュ厖 Scrapling 鏃犳硶瑕嗙洊鐨勪腑鏂囧钩鍙帮紙B绔?灏忕孩涔?鍏紬鍙凤級
+- 鎻愪緵 Twitter/YouTube 绛夌ぞ浜ゅ钩鍙扮殑缁撴瀯鍖栨暟鎹?- 涓?Scrapling 浜掕ˉ锛歋crapling 鐖綉椤碉紝Agent-Reach 閲囧钩鍙?
