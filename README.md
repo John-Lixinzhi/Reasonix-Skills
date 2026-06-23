@@ -1,21 +1,16 @@
-<div align="center">
+<div align='center'>
 
 # Reasonix AI Agent Skills
 
-**47 production-ready agent skills 路 9 categories 路 Auto-triggering**
+**47 production-ready agent skills - 9 categories - Auto-triggering**
 
 </div>
-
 ---
-
 ## Quick Install
-
-```bash
+```
 npx skills add John-Lixinzhi/reasonix-skills
 ```
-
 ---
-
 ## Skills
 
 :microscope: **Development (14)**
@@ -33,7 +28,7 @@ frontend-design
 :gear: **System (4)**
 skill-router / skill-onboarder / skillspector-wrapper / skillopt-wrapper
 
-:hammer_and_wrench: **Tools (5)**
+:hammer: **Tools (5)**
 powertoys-skill / handoff / cua-skill / pixelle-video-skill / agent-reach-skill
 
 :books: **Reference (4)**
@@ -46,15 +41,6 @@ ml-intern-skill / matlab-research / research-writing / devils-advocate / researc
 math-modeling
 
 ---
-
-## Credits
-
-[obra/superpowers](https://github.com/obra/superpowers) 路 [mattpocock/skills](https://github.com/mattpocock/skills) 路 [NVIDIA/SkillSpector](https://github.com/NVIDIA/SkillSpector) 路 [microsoft/SkillOpt](https://github.com/microsoft/SkillOpt) 路 [op7418/guizang-ppt-skill](https://github.com/op7418/guizang-ppt-skill)
-
----
-
-<div align="center">
-
+<div align='center'>
 **Skills over prompts. Let the AI decide when to use what.**
-
 </div>
